@@ -1,6 +1,6 @@
 This project aims to design a regime-switch detection method and a stressed VaR to capture VaR exceptions from delta-normal model in the Treasury bond market.  
   
-To validate the use of delta-normal VaR as the baseline model, daily yield change (dy) of bonds at multiple tenors are tested using QQ plot to ensure normality. While dy of shorter tenor bonds shows a higher kurtosis and more tail movements, those with longer tenors converge to normal distribution, which makes delta normal VaR appropriate as a risk measure.   
+To validate the use of delta-normal VaR as the baseline model, daily par yield change (dy) of bonds at multiple tenors are tested using QQ plot to ensure normality. While dy of shorter tenor bonds shows a higher kurtosis and more tail movements, those with longer tenors converge to normal distribution, which makes delta normal VaR appropriate as a risk measure.   
   
 Then derived semi annual discount factors (df) by bootstrapping from par yields of bonds with 6-mo, 1-yr, 2-yr, 5-yr, 7-yr, and 10-yr tenor, interpolating with constant semi annual depreciation rate assumption, i.e. df_1.5yr = df_1yr * c, df_2yr = df_1.5yr * c. Used covariance matrix of dy over the last 252 trading days (1 year) and df to calculate KRDV and delta-normal VaR.  
 
