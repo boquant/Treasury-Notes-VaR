@@ -6,6 +6,6 @@ Then derived semi annual discount factors (df) by bootstrapping from par yields 
 
 Since dy tends to be normally distributed, most losses would fall into the range of delta-normal VaR under normal market conditions, and detecting outliers becomes the key of preventing extreme tail losses.  
 
-The regime-switch detection method uses mahalanobis distance and a chi-square test. Upon an outlier, model assumes a stressed market over 10 trading days (2 weeks), and multiplies VaR by a ratio (current short term (10 days) PnL volatility to the median of short term PnL volatility) to be stressed VaR.  
+The regime-switch detection method therefore uses mahalanobis distance and a chi-square test. Upon an outlier, model assumes a stressed market over 10 trading days (2 weeks), and multiplies VaR by a ratio (current short term (10 days) PnL volatility to the median of short term PnL volatility) to be stressed VaR.  
 
 Backtested on data from 1990 - 2025, stressed VaR reduces exceptions by 50 percents and passes both unconditional test and independence test. Applied PCA to exceptions and calculated dot products of exceptions dy and first 3 PCs as a measure of dy movements, concluded VaR exception was mainly caused by shift in first PC (level) and stressed VaR can capture level movements but fails when there is shift in PC combination.
